@@ -1,0 +1,23 @@
+${AnsiBackground.BLACK}
+${AnsiColor.GREEN}
+:yy/   `shdh`   :yhd+
+ oNm: -mm+mNh  omyyNN+
+  dNm:mh` oNN+sm/ `mNm
+  sNNmy   -NNmm:   yNN. -+s:
+  oNNd`   .NNN+    sNN./mmNm:
+  oNN:    `NNd     sNN+my.hNm.
+  oNN-    `NNy     sNNms  -NNs
+  oNN-    `NNy     sNNy    mNd
+  oNN-    `NNy     sNN-    dNd
+  oNN-    `NNy     sNN.   `mNy
+  oNN-    `NNy     sNN.   oNm-
+  oNN-    `NNy     sNN.  /mN+
+  oNN-    `NNy     sNN. omm/
+  oNN-    `NNy     oNN/hNh-
+  .--`     --.     +NNNh:
+             `-/oymNmNd
+             -mhyo/ :mNs
+                     :mmy`
+-----------------------------
+//////Virgo.sys (2021)///////
+=============================
