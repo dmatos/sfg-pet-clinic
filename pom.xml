@@ -14,7 +14,7 @@
     </parent>
     <groupId>guru.springframework</groupId>
     <artifactId>sft-pet-clinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>sft-pet-clinic</name>
     <description>sft-pet-clinic</description>
     <properties>
@@ -41,15 +41,17 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <goal>install</goal>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
     <scm>
         <developerConnection>
             scm:git:git@github.com:dmatos/sfg-pet-clinic.git
         </developerConnection>
-      <tag>sft-pet-clinic-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
