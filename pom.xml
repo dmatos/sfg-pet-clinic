@@ -37,7 +37,19 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <goal>install</goal>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+    <scm>
+        <developerConnection>
+            scm:git:git@github.com:dmatos/sfg-pet-clinic.git
+        </developerConnection>
+    </scm>
 
 </project>
