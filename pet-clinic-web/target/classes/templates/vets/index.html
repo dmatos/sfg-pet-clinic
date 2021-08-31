@@ -5,10 +5,14 @@
     <title>Vets List</title>
 </head>
 <body>
-    <h1>List of Vets...</h1>
+    <h1>Vets List</h1>
     <table>
         <tbody>
-        <tr th:foreach{}></tr>
+        <tr th:each="vet : ${vets}">
+            <td th:text="${vet.id}">1</td>
+            <td th:text="${vet.firstName}">Joe</td>
+            <td th:text="${vet.lastName}">Doe</td>
+        </tr>
         </tbody>
     </table>
 </body>
