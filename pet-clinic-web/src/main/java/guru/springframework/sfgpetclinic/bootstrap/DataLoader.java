@@ -27,16 +27,23 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        int count = petTypeService.findAll().size();
 
+        if (count == 0) {
+            loadData();
+        }
+    }
+
+    private void loadData(){
         PetType dog = new PetType();
         dog.setName("Sofia");
-        PetType savedDogPetType = petTypeService.save(dog);
-        Long savedDogTypeId = savedDogPetType.getId();
+        dog = petTypeService.save(dog);
+        Long savedDogTypeId = dog.getId();
 
         PetType cat = new PetType();
         cat.setName("Miwa");
-        PetType savedCatPetType = petTypeService.save(cat);
-        Long savedCatTypeId = savedCatPetType.getId();
+        cat = petTypeService.save(cat);
+        Long savedCatTypeId = cat.getId();
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
@@ -46,7 +53,7 @@ public class DataLoader implements CommandLineRunner {
         owner1.setTelephone("12312313");
 
         Pet mikesPet = new Pet();
-        mikesPet.setPetType(savedDogPetType);
+        mikesPet.setPetType(dog);
         mikesPet.setOwner(owner1);
         mikesPet.setBirthDate(LocalDate.now());
         mikesPet.setName("Rosco");
@@ -65,6 +72,7 @@ public class DataLoader implements CommandLineRunner {
         fionasCat.setName("Just Cat");
         fionasCat.setOwner(owner2);
         fionasCat.setBirthDate(LocalDate.now());
+        fionasCat.setPetType(cat);
         owner2.getPets().add(fionasCat);
 
         ownerService.save(owner2);
@@ -80,7 +88,7 @@ public class DataLoader implements CommandLineRunner {
         Speciality dentistry = new Speciality();
         dentistry.setDescription("Dentistry");
         dentistry = specialityService.save(dentistry);
-        
+
         Vet vet1 = new Vet();
         vet1.setFirstName("Sam");
         vet1.setLastName("Axe");
