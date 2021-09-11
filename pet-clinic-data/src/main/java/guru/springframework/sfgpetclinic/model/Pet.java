@@ -1,5 +1,7 @@
 package guru.springframework.sfgpetclinic.model;
 
+import org.springframework.data.annotation.Id;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -11,7 +13,7 @@ public class Pet extends BaseEntity{
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "")
+    @JoinColumn(name = "pet_type_id")
     private PetType petType;
 
     @ManyToOne
