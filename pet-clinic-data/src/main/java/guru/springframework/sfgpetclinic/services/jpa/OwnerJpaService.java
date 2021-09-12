@@ -35,9 +35,7 @@ public class OwnerJpaService implements OwnerService {
 
     @Override
     public Owner findById(Long id) {
-        Optional<Owner> opt = ownerRepository.findById(id);
-        if(opt.isPresent()) return opt.get();
-        return null;
+        return ownerRepository.findById(id).orElse(null);
     }
 
     @Override

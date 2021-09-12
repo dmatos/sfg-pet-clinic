@@ -28,9 +28,7 @@ public class PetTypeJpaService implements PetTypeService {
 
     @Override
     public PetType findById(Long aLong) {
-        Optional<PetType> opt = petTypeRepository.findById(aLong);
-        if(opt.isPresent()) return opt.get();
-        return null;
+        return petTypeRepository.findById(aLong).orElse(null);
     }
 
     @Override

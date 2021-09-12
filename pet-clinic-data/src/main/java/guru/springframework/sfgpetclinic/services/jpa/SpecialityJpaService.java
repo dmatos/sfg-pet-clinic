@@ -29,9 +29,7 @@ public class SpecialityJpaService implements SpecialityService {
 
     @Override
     public Speciality findById(Long aLong) {
-        Optional<Speciality> opt = specialityRepository.findById(aLong);
-        if(opt.isPresent()) return opt.get();
-        return null;
+        return specialityRepository.findById(aLong).orElse(null);
     }
 
     @Override
